@@ -124,8 +124,8 @@ class BiqCrunchOptimizer:
             if "Problem is infeasible" in str(output):
                 raise Exception("Problem is infeasible.")
             bits = {bit: 0 for bit in range(num_bits)}
-            print(output)
+            ###print(output)
             for bit_idx in [int(bit_idx_str) for bit_idx_str in str(output).split("Solution = ")[1].split("\\n")[0][2:-2].split(" ") if len(bit_idx_str)]:
                 bits[bit_idx - 1] = 1
-            print("Maximum value: {}".format(int(str(output).split("Maximum value = ")[1].split("\\n")[0])))
+            ###print("Maximum value: {}".format(int(str(output).split("Maximum value = ")[1].split("\\n")[0])))
             return (-int(str(output).split("Maximum value = ")[1].split("\\n")[0]) + objective_constant) / objective_multiplier, binary_encoder.bits_to_variables(bits)
