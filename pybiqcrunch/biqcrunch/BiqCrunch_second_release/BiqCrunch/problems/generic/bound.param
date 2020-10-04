@@ -1,0 +1,53 @@
+# INITIAL VALUE OF ALPHA [default: 1e-1]
+alpha0 = 1e-1
+
+# SCALING OF ALPHA [default: 0.5]
+#scaleAlpha = 0.5
+
+# MINIMUM ALPHA VALUE [default: 5e-5]
+minAlpha = 1e-5
+
+# INITIAL VALUE OF TOLERANCE [default: 1e-1]
+tol0 = 1e-1
+
+# SCALING OF TOLERANCE [default: 0.95]
+#scaleTol = 0.95
+
+# MINIMUM TOLERANCE VALUE [default: 1e-2]
+minTol = 5e-2
+
+# ADD VIOLATED INEQUALITIES (1 -> true, 0 -> false) [default: 1]
+withCuts = 0
+
+# MINIMUM VALUE TO ADD A CUT [default: -5e-2]
+#gapCuts = -5e-2
+
+# NUMBER OF INEQUALITIES TO ADD [default: 500]
+#cuts = 500
+
+# MINIMUM NUMBER OF INEQUALITIES [default: 50]
+#minCuts = 50
+
+# MAXIMUM NUMBER OF ITERATION FOR THE BFGS SOLVER [default: 2000]
+nitermax = 10000
+
+# MINIMUM CALL OF BFGS [default: 12]
+#minNiter = 12
+
+# MAXIMUM CALL OF BFGS [default: 100]
+#maxNiter = 100
+
+# ONLY ROOT NODE (1 -> true, 0 -> false) [default: 0]
+root = 1
+
+# ENABLE PRIMAL HEURISTIC (1 -> true, 0 -> false) [default: 1]
+heur_1 = 0
+
+# ENABLE BFGS HEURISTIC (1 -> true, 0 -> false) [default: 1]
+heur_2 = 0
+
+# ENABLE NODE HEURISTIC (1 -> true, 0 -> false) [default: 1]
+heur_3 = 0
+
+# ENABLE LOCAL SEARCH (ONE-OPT) AFTER HEURISTICS [default: 1]
+local_search = 0

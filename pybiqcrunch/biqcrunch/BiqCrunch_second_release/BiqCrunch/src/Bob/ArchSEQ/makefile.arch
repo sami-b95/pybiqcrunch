@@ -1,0 +1,64 @@
+# 
+# 
+#         BOB version 1.0:  Branch and Bound Optimization LiBrary
+#                     PNN Team of PRiSM laboratory
+#              University of Versailles St-Quentin en Yvelines.
+#       Authors:  M. Benaichouche, V. Cung, S. Dowaji, B. Le Cun
+#                       T. Mautor, C. Roucairol.
+#                     (C) 1995 All Rights Reserved
+# 
+#                               NOTICE
+# 
+#  Permission to use, copy, modify, and distribute this software and
+#  its documentation for any purpose and without fee is hereby granted
+#  provided that the above copyright notice appear in all copies and
+#  that both the copyright notice and this permission notice appear in
+#  supporting documentation.
+# 
+#  Neither the institutions (Versailles University, PRiSM Laboratory, 
+#  the PNN Team), nor the Authors make any representations about the 
+#  suitability of this software for any purpose.  This software is 
+#  provided ``as is'' without express or implied warranty.
+# 
+# 
+# 
+#  
+#   File   : makefile.arch
+#   Author : B. Le Cun.
+#   Date   : May 19 1995.
+#   Comment: makefile for ARTP=SEQ.
+# 
+# 
+
+include Bob/makefile.inc
+
+MKDIR = $(BOBDIR)/Common
+
+OBJ = $(BOBOBJ)$(PLTP)
+OBJARCH = $(OBJ)op.o $(OBJ)upbd.o $(OBJ)goproc.o
+ARCHSRC = $(BOBDIR)/Arch$(ARTP)/
+
+OBJFILES = $(OBJAPP) $(OBJARCH)
+
+FLG = -DAPPINC=\"$(INC)\"  $(BOBCFLG) -DPLTP=SEQ $(DEBUG)
+
+all : SEQ
+
+SEQ : $(OBJARCH)
+	$(MAKE) -f $(MKDIR)/makefile.com PLTP=SEQ OBJAPP="$(OBJFILES)"
+	
+TST : $(OBJARCH)
+	$(MAKE) -f $(MKDIR)/makefile.com PLTP=TST  OBJAPP="$(OBJFILES)"
+
+$(OBJ)op.o : $(ARCHSRC)op.c $(LIBINC)
+	$(CC) -c $(ARCHSRC)op.c $(FLG)
+	mv op.o $(OBJ)op.o
+
+$(OBJ)upbd.o : $(ARCHSRC)upbd.c $(LIBINC)
+	$(CC) -c $(ARCHSRC)upbd.c $(FLG)
+	mv upbd.o $(OBJ)upbd.o
+
+$(OBJ)goproc.o : $(ARCHSRC)goproc.c $(LIBINC)
+	$(CC) -c $(ARCHSRC)goproc.c $(FLG)
+	mv goproc.o $(OBJ)goproc.o
+

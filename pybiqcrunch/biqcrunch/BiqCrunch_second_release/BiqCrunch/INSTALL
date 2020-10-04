@@ -1,0 +1,16 @@
+To compile and test BiqCrunch, run the following commands:
+
+    $ cd src
+    $ make
+    $ source runtests.sh
+
+This will put a `biqcrunch` binary in each of the problems/<PROBLEM>/
+directories. Each binary is tested using the example.bc file in its directory
+and the reported optimal value is compared with the known optimal value in the
+example.ans file.
+
+To clean all the binaries, run the following commands:
+
+    $ cd src
+    $ make clean
+

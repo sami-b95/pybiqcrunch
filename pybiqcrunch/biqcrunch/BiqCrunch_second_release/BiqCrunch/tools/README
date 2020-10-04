@@ -1,0 +1,8 @@
+To compile and test the tools, run the following commands:
+
+    $ make
+    $ source tests.sh
+
+To clean the binaries and the output files, run the following command:  
+
+    $ make clean

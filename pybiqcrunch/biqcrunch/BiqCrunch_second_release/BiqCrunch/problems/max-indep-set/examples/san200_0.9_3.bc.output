@@ -1,0 +1,66 @@
+*******************************************************************************
+*                            BIQ CRUNCH 2.0 Solver                            *
+*******************************************************************************
+| Copyright(C) 2010-2016 N. Krislock, J. Malick, F. Roupin                    |
+| BIQ CRUNCH uses L-BFGS-B by C. Zhu, R. Byrd, J. Nocedal and BOB 1.0 by PNN  |
+| Team of PRiSM Laboratory.                                                   |
+|                                                                             |
+| L-BFGS-B is distributed under the terms of the New BSD License. See the     |
+| website http://users.eecs.northwestern.edu/~nocedal/lbfgsb.html for more    |
+| information. BOB is free software. For more information visit the website   |
+| http://www.prism.uvsq.fr/~blec/index.php?p=./rech/so&lang=fr                |
+*******************************************************************************
+Input file: examples/san200_0.9_3.bc
+Solving as a MAXIMIZATION problem
+Problem Size = 200 Number of equalities = 2191 Number of inequalities = 0
+Using Max-independent-set heuristic
+BiqCrunch Parameters:
+              alpha0 = 0.001000
+          scaleAlpha = 0.500000
+            minAlpha = 0.000010
+                tol0 = 0.100000
+            scaleTol = 0.950000
+              minTol = 0.010000
+            withCuts = 1
+             gapCuts = -0.100000
+                cuts = 500
+             minCuts = 50
+            nitermax = 2000
+            minNiter = 12
+            maxNiter = 100
+           maxNAiter = 50
+             scaling = 1
+                root = 0
+              heur_1 = 1
+              heur_2 = 1
+              heur_3 = 1
+ soln_value_provided = 0
+          soln_value = 0
+          time_limit = 0
+   branchingStrategy = 1
+                seed = 2016
+               NBGW1 = 1
+               NBGW2 = 10
+        local_search = 1
+Heuristic 1: 	Beta updated => 31
+
+**************************************************************************************
+                                     Node 1
+**************************************************************************************
+Problem size 200
+Heuristic 2: 	Beta updated => 32
+Heuristic 2: 	Beta updated => 33
+Heuristic 2: 	Beta updated => 34
+Heuristic 2: 	Beta updated => 35
+Heuristic 2: 	Beta updated => 38
+Heuristic 2: 	Beta updated => 44
+======================================================================================
+Prune! Bound = 44.51, Iter = 11, alpha = 1e-05, tol = 7e-02, cuts = 517, time = 2.9
+======================================================================================
+Depth = 0, Bound = 44, Best = 44
+
+Nodes = 1
+Root node bound = 44.50707
+Maximum value = 44
+Solution = { 8 14 20 27 34 37 40 44 47 49 50 60 67 68 74 78 80 87 89 94 100 101 102 105 111 113 117 119 120 126 131 132 142 143 147 148 159 177 188 189 195 197 198 199 }
+CPU time = 2.9111 s

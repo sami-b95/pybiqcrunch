@@ -1,0 +1,79 @@
+# INITIAL VALUE OF ALPHA [default: 1e-1]
+alpha0 = 1e-3 
+
+# SCALING OF ALPHA [default: 0.5]
+#scaleAlpha = 0.5
+
+# MINIMUM ALPHA VALUE [default: 5e-5]
+minAlpha = 1e-5 
+
+# INITIAL VALUE OF TOLERANCE [default: 1e-1]
+#tol0 = 1e-1
+
+# SCALING OF TOLERANCE [default: 0.95]
+#scaleTol = 0.95
+
+# MINIMUM TOLERANCE VALUE [default: 1e-2]
+#minTol = 1e-2
+
+# ADD VIOLATED INEQUALITIES (1 -> true, 0 -> false) [default: 1]
+#withCuts = 1
+
+# MINIMUM VALUE TO ADD A CUT [default: -5e-2]
+gapCuts = -1e-1 
+
+# NUMBER OF INEQUALITIES TO ADD [default: 500]
+#cuts = 500
+
+# MINIMUM NUMBER OF INEQUALITIES [default: 50]
+#minCuts = 50
+
+# MAXIMUM NUMBER OF ITERATION FOR THE BFGS SOLVER [default: 2000]
+#nitermax = 2000
+
+# MINIMUM CALL OF BFGS [default: 12]
+#minNiter = 12
+
+# MAXIMUM CALL OF BFGS [default: 100]
+#maxNiter = 100
+
+# SCALING (1 -> true, 0 -> false) [default: 1]
+#scaling = 1
+
+# ONLY ROOT NODE (1 -> true, 0 -> false) [default: 0]
+#root = 0
+
+# ENABLE PRIMAL HEURISTIC (1 -> true, 0 -> false) [default: 1]
+#heur_1 = 1
+
+# ENABLE BFGS HEURISTIC (1 -> true, 0 -> false) [default: 1]
+#heur_2 = 1
+
+# ENABLE NODE HEURISTIC (1 -> true, 0 -> false) [default: 1]
+#heur_3 = 1
+
+# PROVIDE SOLUTION VALUE (1 -> true, 0 -> false) [default: 0]
+#soln_value_provided = 0
+
+# VALUE OF PROVIDED SOLUTION (only used if soln_value_provided = 1) [default: 0]
+#soln_value = 0
+
+# TIME LIMIT IN SECONDS [default: 0 (i.e., no time limit)]
+#time_limit = 0
+
+# BRANCHING STRATEGY (0 = LEAST_FRACTIONAL,
+#                     1 = MOST_FRACTIONAL,
+#                     2 = CLOSEST_TO_ONE) [default: 1]
+#branchingStrategy = 1
+
+# RANDOM NUMBER GENERATOR SEED [default: 2016]
+#seed = 2016
+
+# ENABLE LOCAL SEARCH (ONE-OPT) AFTER HEURISTICS [default: 1]
+#local_serach = 1
+
+# GOEMANS/WILLIAMSON HEURISTIC ITERATIONS
+# (number of iterations in SDP_BOUND_HEUR = NBGW1 * problem_size) [default:  1]
+# (number of iterations in ROUNDING_HEUR =  NBGW2 * problem_size) [default: 10]
+#NBGW1 = 1
+#NBGW2 = 10

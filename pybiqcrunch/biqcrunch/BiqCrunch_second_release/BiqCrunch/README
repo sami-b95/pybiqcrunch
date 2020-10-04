@@ -1,0 +1,18 @@
+See the INSTALL file for instructions on how to install BiqCrunch.
+
+After you have installed BiqCrunch, you can solve any binary quadratic
+problem specified in the LP file format as follows.
+
+1. Create a BiqCrunch BC file from the LP file:
+
+    $ tools/lp2bc.py example.lp > example.bc
+
+2. Run BiqCrunch on the BC file:
+
+    $ problems/generic/biqcrunch example.bc biq_crunch.param
+
+The details of the execution of BiqCrunch will be stored in a file 
+called example.bc.output. For more details, run BiqCrunch as follows:
+
+    $ problems/generic/biqcrunch -v 1 example.bc biq_crunch.param
+
