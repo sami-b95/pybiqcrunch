@@ -61,6 +61,7 @@ class BiqCrunchOptimizer:
         binary_encoder = BinaryEncoder(self.variables, couplings)
         bits_couplings = binary_encoder.to_binary()
         string = " "
+        constant = 0
         for indices, coupling in bits_couplings.items():
             if coupling_rescaling:
                 coupling = int(coupling * coupling_rescaling)
